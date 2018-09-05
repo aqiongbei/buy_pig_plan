@@ -1,0 +1,7 @@
+{
+    "attackTimes": 500,
+    "everyTaskSleepTime": 500000,
+    "chromium": {
+        "headless": false
+    }
+}
