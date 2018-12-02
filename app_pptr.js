@@ -4,6 +4,9 @@ const config = require('config');
 const colors = require('colors');
 const cron = require('node-cron');
 const puppeteer = require('puppeteer');
+const events = require('events');
+const e = new events();
+e.setMaxListeners(0);
 
 const util = require('./utils/util');
 const {WEB_TYPE, TASK_TYPE, TASK_STATUS} = util.taskConst;
@@ -12,11 +15,11 @@ const flow = require('./flow/flow');
 const TARGET = config.get('targetInfo');
 
 process.on('uncaughtException', function (err) {
-    log.error(err);
+    console.log(err);
 });
 
 process.on('unhandledRejection', function(err, p) {
-    log.error(err.stack);
+    console.log(err.stack);
 });
 
 if (config.util.getEnv('NODE_ENV') != 'production') {
