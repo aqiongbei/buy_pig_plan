@@ -1,5 +1,5 @@
 'use strict'
-const {WEB_TYPE, TASK_TYPE, TASK_STATUS} = require('../../utils/task_const');
+const TASK_STATUS = require('../../utils/util').TASK_STATUS;
 
 async function flow(page, item, target) {
     let result = {
@@ -33,12 +33,12 @@ async function flow(page, item, target) {
         result.msg = `[TYPE ERROR] ${e}`;
     }
 
-    result.status = getTaskStatus(result.msg);
+    result.status = getTaskResult(result.msg);
 
     return result;
 }
 
-function getTaskStatus(text) {
+function getTaskResult(text) {
     let status = TASK_STATUS.failed;
     let doneReg = /已短信提醒|正在呼叫|将给您回电|请准备接听/g;
     let lockedReg = /过于频繁|频繁/g;

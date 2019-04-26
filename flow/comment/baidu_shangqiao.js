@@ -1,5 +1,5 @@
 'use strict'
-const {WEB_TYPE, TASK_TYPE, TASK_STATUS} = require('../../utils/task_const');
+const TASK_STATUS = require('../../utils/util').TASK_STATUS;
 
 async function flow(page, item, target) {
     let result = {

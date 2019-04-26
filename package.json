@@ -4,8 +4,8 @@
   "description": "#### 买猪计划：一个电话攻击、留言攻击的工具",
   "main": "bomer.js",
   "scripts": {
-    "debug": "set NODE_ENV=debug && node app_pptr.js",
-    "start": "set NODE_ENV=production && node app_pptr.js",
+    "debug": "cross-env NODE_ENV=debug node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,11 +19,7 @@
     "colors": "^1.3.0",
     "config": "^1.30.0",
     "node-cron": "^1.2.1",
-    "nodemailer": "^4.6.7",
-    "puppeteer": "^1.6.0"
-  },
-  "devDependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "request": "^2.87.0"
+    "cross-env": "^5.2.0",
+    "puppeteer": "^1.14.0"
   }
 }

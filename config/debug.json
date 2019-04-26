@@ -1,6 +1,9 @@
 {
-    "attackTimes": 500,
-    "everyTaskSleepTime": 500000,
+    "attack": {
+        "times": 100,
+        "task_type": "call",
+        "interval": 6000
+    },
     "chromium": {
         "headless": false
     }

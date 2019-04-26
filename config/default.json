@@ -1,29 +1,22 @@
 {
-    "targetInfo": {
+    "target": {
         "phone": "",
         "name": "",
         "email": "",
         "address": "",
-        "comment": "最近正好需要这个,看到了你们的网站,也看到了你们的产品,很不错,很感兴趣,希望可以得到体验,也希望可以回复一下"
+        "comment": ""
     },
-    "attackTimes": 6,
-    "attackTime": "0 2 * * * *",
-    "everyTaskSleepTime": 300000,
+    "attack": {
+        "times": 6,
+        "time": "0 2 * * * *",
+        "web_type": "baidu_lxb",
+        "type_type": "call", // "comment"
+        "interval": 300000
+    },
     "chromium": {
         "slowMo": 100,
-        "path": "./chromium/chrome-win32/chrome.exe"
-    },
-    "email": {
-        "account": {
-            "type": "",
-            "pass": "",
-            "user": ""
-        },
-        "mailer": {
-            "from": "",
-            "to": "",
-            "subject": "",
-            "content": ""
-        }
+        "timeout": 30000,
+        "devtools": false,
+
     }
 }

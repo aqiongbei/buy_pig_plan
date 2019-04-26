@@ -10750,5 +10750,82 @@
         "task_type": "call",
         "web_type": "baidu_lxb",
         "id": "call_baidu_lxb_id_1535"
+    },
+    {
+        "name": "武汉欧尔光电科技有限公司",
+        "url": "http://www.wh-oe.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_2"
+    },
+    {
+        "name": "青岛统世职业培训学校",
+        "url": "http://www.tongshipeixun.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_9"
+    },
+    {
+        "name": "济宁市金满田农作物种植专业合作社",
+        "url": "http://www.jiningjinmantian.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_1"
+    },
+    {
+        "name": "武汉欧尔光电科技有限公司",
+        "url": "http://www.wh-oe.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_2"
+    },
+    {
+        "name": "常州昌昇自动化设备有限公司",
+        "url": "http://www.fanuc0519.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_3"
+    },
+    {
+        "name": "安丘市金都玻璃钢有限公司",
+        "url": "http://www.jindufrp.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_4"
+    },
+    {
+        "name": "广东泰旭律师事务所",
+        "url": "http://www.dfcsfb.com/",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_5"
+    },
+    {
+        "name": "珠海市天长地久摄影设计有限公司",
+        "url": "http://www.zh9999.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_6"
+    },
+    {
+        "name": "北京好礼游科技有限公司",
+        "url": "http://www.eeemao.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_7"
+    },
+    {
+        "name": "北京威哲科技有限公司",
+        "url": "http://www.virasport.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_8"
+    },
+    {
+        "name": "青岛统世职业培训学校",
+        "url": "http://www.tongshipeixun.com",
+        "task_type": "call",
+        "web_type": "baidu_lxb",
+        "id": "call_baidu_lxb_id_9"
     }
 ]

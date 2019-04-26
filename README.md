@@ -23,11 +23,10 @@
 - **可重复**。对于电话回拨系统攻击的方式，可以经常跑一跑，即使是同一批网站多跑几次也是没有关系的
 - **可放大**。不管是电话攻击还是留言攻击，都存在对方做电话回访的可能性，所以，你发动的可不仅仅是一次攻击哦
 
-#### 安装教程
+#### 使用教程
 
-- 本项目依赖[`chromium(需要梯子)`](https://download-chromium.appspot.com/),需要手动下载安装.
-- 下载本项目
 
+- 下载
 ```sh
 git clone https://github.com/aqiongbei/bomer.git
 ```
@@ -40,17 +39,45 @@ npm config set puppeteer_download_host=https://npm.taobao.org/mirrors
 npm install
 ```
 
-- 启动项目
-```sh
-npm run start
+- 配置
+**使用前请先修改配置文件**，配置文件共有两个，都放在`/config`目录下。
+    - `default.json`: 默认配置文件，所有可配置的内容都在这里列举了，`npm start`使用的就是这个配置文件
+    - `debug.json`: debug模式的配置文件，在debug模式这里的配置会覆盖`default.json`中的配置
+
+各个配置字段说明说明如下：
+```js
+{
+    "target": {                     // 攻击目标的配置
+        "phone": "",                // 目标的手机号 必填
+        "name": "",                 // 目标的姓名 必填
+        "email": "",                // 目标的邮箱 尽量填写，有的网站需要
+        "address": "",              // 目标的地址 尽量填写，有的网站需要
+        "comment": "",              // 留言攻击时候留言的内容，留言模式必须
+    },
+    "attack": {                     // 攻击任务的配置
+        "times": 6,                 // 攻击次数
+        "time": "0 2 * * * *",      // 定时模式下的攻击时间配置
+        "web_type": "baidu_lxb",    // 攻击的网站类型，支持的类型都在`/flow/flow.js`中定义
+        "type_type": "call",        // 攻击的类型，目前支持"comment" "call"两种
+        "interval": 600000,         // 攻击的间隔，间隔太小会提示操作频繁，起不到攻击作用，默认60s
+    },
+    "chromium": {                   // chromium的配置信息
+        "slowMo": 100,              // 向网页输入信息的每个字符的间隔
+        "timeout": 30000,           // 网页请求超时时间，超过这个时间没有请求完成，这个任务就算失败
+        "devtools": false,          // 是否开启chromium的 devtools，默认false就好
+    }
+}
 ```
 
+- 启动项目
+```sh
+# production模式，非立即执行，是定时执行的
+npm start
+# debug模式
+npm run debug
+```
 
-#### 使用说明
-
-1. 配置文件
-2. 网站源切换
-
+- 网站源切换
 #### 实现功能
 
 - 电话攻击
@@ -61,10 +88,3 @@ npm run start
 - 随机网站攻击
 - 100000+网站支持
 - 攻击参数可配置
-
-#### TODO
-
-- log记录
-- 短信攻击
-- 邮件接受报告
-- 数据存入数据库
