@@ -10,7 +10,7 @@
         "times": 6,
         "time": "0 2 * * * *",
         "web_type": "baidu_lxb",
-        "type_type": "call", // "comment"
+        "task_type": "call", // "comment"
         "interval": 300000
     },
     "chromium": {

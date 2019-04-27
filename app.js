@@ -39,7 +39,7 @@ if (process.env.NODE_ENV == 'debug') {
     })();
 }
 
-let cron_job = cron.schedule(attack.time, async function(){
+let cron_job = cron.schedule(ATTACK.time, async function(){
     await run(ATTACK);
 }, false);
 
