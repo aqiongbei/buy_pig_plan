@@ -1,5 +1,4 @@
 chromium/
 config/
 sources/
-utils/get*.js
 node_modules/
